@@ -15,4 +15,15 @@
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map (kbd "M-<f6>") 'org-capture)
 
+;; org-mode colors
+(setq org-todo-keyword-faces
+      '(
+		("TODO" . (:foreground "DeepSkyBlue" :weight bold))
+        ("INPR" . (:foreground "yellow" :weight bold))
+        ("DONE" . (:foreground "green" :weight bold))
+        ("IMPEDED" . (:foreground "red" :weight bold))
+		("CANCELLED" . (:foreground "magenta" :weight bold))
+		("DEFERRED" . (:foreground "DarkGoldenrod3" :weight bold))
+        ))
+
 (provide 'setup-org)
