@@ -101,7 +101,7 @@
 (global-set-key (kbd "C-S-b") (lambda () (interactive) (ignore-errors (backward-char 5))))
 
 ;; Killing buffer
-(global-set-key (kbd "C-x C-k") 'kill-this-buffer)
+(global-set-key (kbd "C-c C-k") 'kill-this-buffer)
 
 ;; Quickly switch to scratch buffer
 (global-set-key (kbd "C-c <tab>") 'goto-scratch)

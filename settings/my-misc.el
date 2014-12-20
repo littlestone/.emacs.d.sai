@@ -38,6 +38,12 @@
                                   "dict.cn"
                                   "http://dict.cn/"
                                   ""])))
+(eval-after-load "webjump"
+  '(add-to-list 'webjump-sites '("法語助手" .
+                                 [simple-query
+                                  "www.frdic.com"
+                                  "http://www.frdic.com/dicts/fr/"
+                                  ""])))
 
 ;; Make eww default for most URLs
 (if (consp browse-url-browser-function)
