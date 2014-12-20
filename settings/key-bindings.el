@@ -279,8 +279,11 @@
 ;; Toggle whitespace-mode
 (global-set-key (kbd "<f9>") 'whitespace-mode)
 
+;; Toggle highlight-indentation-mode
+(global-set-key (kbd "<C-f9>") 'highlight-indentation-mode)
+
 ;; Turn on the menu bar for exploring new modes
-(global-set-key (kbd "C-<f10>") 'menu-bar-mode)
+(global-set-key (kbd "<C-f10>") 'menu-bar-mode)
 
 (provide 'key-bindings)
 

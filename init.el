@@ -84,6 +84,7 @@
      groovy-mode
      guide-key
      highlight-escape-sequences
+     highlight-indentation
      htmlize
      ido-at-point
      ido-ubiquitous
