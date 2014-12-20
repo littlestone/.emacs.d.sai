@@ -66,6 +66,7 @@
      clojure-mode
      color-theme
      css-eldoc
+     dash
      datomic-snippets
      dired-details
      elisp-slime-nav
@@ -75,6 +76,7 @@
      flx-ido
      flycheck
      flycheck-pos-tip
+     fold-this
      gist
      git-commit-mode
      gitconfig-mode
