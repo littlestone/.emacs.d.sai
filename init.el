@@ -103,6 +103,7 @@
      shell-command
      simple-httpd
      skewer-mode
+     slime
      smart-compile
      smartparens
      smex
@@ -149,6 +150,7 @@
 (require 'setup-shell)
 (require 'setup-rgrep)
 (require 'setup-magit)
+(require 'setup-slime)
 (require 'setup-hippie)
 (require 'setup-skewer)
 (require 'setup-paredit)
