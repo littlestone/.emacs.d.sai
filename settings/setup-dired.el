@@ -15,8 +15,8 @@
           dired-do-copy
           dired-create-directory
           wdired-abort-changes)
-        (eval `(defadvice ,it (after revert-buffer activate)
-                 (revert-buffer))))
+  (eval `(defadvice ,it (after revert-buffer activate)
+           (revert-buffer))))
 
 ;; C-a is nicer in dired if it moves back to start of files
 (defun dired-back-to-start-of-files ()
@@ -52,5 +52,24 @@
      (define-key wdired-mode-map (kbd "C-a") 'dired-back-to-start-of-files)
      (define-key wdired-mode-map (vector 'remap 'beginning-of-buffer) 'dired-back-to-top)
      (define-key wdired-mode-map (vector 'remap 'end-of-buffer) 'dired-jump-to-bottom)))
+
+;; Reuse the current dired buffer to visit another directory
+(require 'dired-single)
+(defun my-dired-init ()
+  "Bunch of stuff to run for dired, either immediately or when it's
+          loaded."
+  ;; <add other stuff here>
+  (define-key dired-mode-map [return] 'dired-single-buffer)
+  (define-key dired-mode-map [mouse-1] 'dired-single-buffer-mouse)
+  (define-key dired-mode-map "^"
+    (function
+     (lambda nil (interactive) (dired-single-buffer "..")))))
+
+;; if dired's already loaded, then the keymap will be bound
+(if (boundp 'dired-mode-map)
+    ;; we're good to go; just add our bindings
+    (my-dired-init)
+  ;; it's not loaded yet, so add our bindings to the load-hook
+  (add-hook 'dired-load-hook 'my-dired-init))
 
 (provide 'setup-dired)

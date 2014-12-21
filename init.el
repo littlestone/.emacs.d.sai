@@ -69,6 +69,7 @@
      dash
      datomic-snippets
      dired-details
+     dired-single
      elisp-slime-nav
      expand-region
      fill-column-indicator
