@@ -14,6 +14,7 @@
         recentf-save-file (expand-file-name "recentf" temporary-file-directory)
         abbrev-file-name (expand-file-name "abbrev_defs" temporary-file-directory)
         tramp-persistency-file-name (expand-file-name "tramp" temporary-file-directory)
+        ido-save-directory-list-file (expand-file-name "ido.last" temporary-file-directory)
         auto-save-list-file-prefix "~/.emacs.d/temps/auto-save-list/.saves-"
         auto-save-file-name-transforms `((".*" ,temporary-file-directory t))))
 
