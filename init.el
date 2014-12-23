@@ -93,6 +93,7 @@
      guide-key
      highlight-escape-sequences
      highlight-indentation
+	 highlight-tail
      htmlize
      ido-at-point
      ido-ubiquitous
