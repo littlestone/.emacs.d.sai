@@ -50,6 +50,9 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
+;; Common lisp library
+(require 'cl-lib)
+
 ;; Setup packages
 (require 'setup-package)
 
@@ -63,6 +66,7 @@
      buster-snippets
      change-inner
      cider
+     cl-lib-highlight
      clojure-mode
      color-theme
      css-eldoc
