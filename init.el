@@ -72,6 +72,7 @@
      css-eldoc
      dash
      datomic-snippets
+     diminish
      dired-details
      dired-single
      elisp-slime-nav
@@ -82,6 +83,8 @@
      flycheck
      flycheck-pos-tip
      fold-this
+     frame-cmds
+     frame-fns
      gist
      git-commit-mode
      gitconfig-mode
@@ -118,6 +121,7 @@
      visual-regexp
      whitespace-cleanup-mode
      yasnippet
+     zoom-frm
      )))
 
 (condition-case nil
