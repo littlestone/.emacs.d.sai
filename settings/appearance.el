@@ -4,6 +4,10 @@
 	  default-truncate-lines t
       truncate-partial-width-windows nil)
 
+;; Set transparent window look
+(set-frame-parameter (selected-frame) 'alpha '(95 95))
+(add-to-list 'default-frame-alist '(alpha 95 95))
+
 ;; Highlight current line
 (global-hl-line-mode 1)
 
