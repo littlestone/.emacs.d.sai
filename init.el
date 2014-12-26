@@ -94,7 +94,7 @@
      guide-key
      highlight-escape-sequences
      highlight-indentation
-	 highlight-tail
+     highlight-tail
      htmlize
      ido-at-point
      ido-ubiquitous
@@ -173,6 +173,9 @@
 (require 'setup-yasnippet)
 (require 'setup-markdown-mode)
 (require 'setup-ace-jump-mode)
+
+;; Additional package setup
+(require 'achievements)
 
 ;; Message how long it took to load everything (minus packages)
 (let ((elapsed (float-time (time-subtract (current-time)
