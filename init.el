@@ -60,6 +60,7 @@
 (defun init--install-packages ()
   (packages-install
    '(ace-jump-mode
+     achievements
      angular-snippets
      browse-kill-ring
      buffer-move
