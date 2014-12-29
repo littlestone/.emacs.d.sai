@@ -2,7 +2,6 @@
 (setq default-directory "~/")
 
 ;; Write temporary files to own directory
-;; Write temporary files to own directory
 (progn
   (defvar --temporary-directory (concat user-emacs-directory "temps"))
   (if (not (file-exists-p --temporary-directory))
@@ -102,6 +101,9 @@
 ;;;
 ;;;=============================================================================
 ;;;
+
+;; Display “lambda” as “λ”
+(global-prettify-symbols-mode 1)
 
 ;; Allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
