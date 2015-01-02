@@ -62,6 +62,7 @@
    '(ace-jump-mode
      achievements
      angular-snippets
+     async
      browse-kill-ring
      buffer-move
      buster-snippets
