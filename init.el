@@ -106,6 +106,7 @@
      move-text
      multiple-cursors
      nodejs-repl
+     paradox
      paredit
      prodigy
      restclient
