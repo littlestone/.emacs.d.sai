@@ -28,6 +28,7 @@
 
 ;; provides minibuffer documentation for the code you're typing into the repl
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-repl-mode-hook 'cider-turn-on-eldoc-mode)
 
 ;; go right to the REPL buffer when it's finished connecting
 (setq cider-repl-pop-to-buffer-on-connect t)
@@ -36,8 +37,8 @@
 (setq cider-show-error-buffer t)
 (setq cider-auto-select-error-buffer t)
 
-;; Where to store the cider history.
-(setq cider-repl-history-file "~/.emacs.d/cider-history")
+;; Move cider history file to temps
+(setq cider-repl-history-file (expand-file-name "cider-history" temporary-file-directory))
 
 ;; Wrap when navigating history.
 (setq cider-repl-wrap-history t)
@@ -51,9 +52,31 @@
 (add-to-list 'auto-mode-alist '("\\.cljs.*$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("lein-env" . enh-ruby-mode))
 
+;; Stop the error buffer from popping up while working in buffers other than the REPL
+(setq cider-popup-stacktraces nil)
+(setq cider-popup-stacktraces-in-repl nil)
+(add-to-list 'same-window-buffer-names "*cider*")
 
-;; key bindings
-;; these help me out with the way I usually develop web apps
+;; Auto Complete for cider
+(require 'ac-cider)
+(add-hook 'cider-mode-hook 'ac-flyspell-workaround)
+(add-hook 'cider-mode-hook 'ac-cider-setup)
+(add-hook 'cider-repl-mode-hook 'ac-cider-setup)
+(eval-after-load "auto-complete"
+  '(progn
+     (add-to-list 'ac-modes 'cider-mode)
+     (add-to-list 'ac-modes 'cider-repl-mode)))
+
+;; Enabling CamelCase support for editing commands(like forward-word, backward-word, etc)
+(add-hook 'cider-repl-mode-hook 'subword-mode)
+
+;; To auto-select the error buffer when it's displayed
+(setq cider-auto-select-error-buffer t)
+
+;; Use specific nrepl-port number 4555
+(setq nrepl-port "4555")
+
+;; key bindings - these help me out with the way I usually develop web apps
 (defun cider-start-http-server ()
   (interactive)
   (cider-load-current-buffer)
@@ -82,8 +105,5 @@
   (add-hook 'cider-repl-mode-hook 'remove-dos-eol)
   (add-hook 'text-mode-hook 'remove-dos-eol) ;If you are annoyed by trailing ^M in text buffers.
   )
-
-;; Move cider history file to temps
-(setq cider-repl-history-file (expand-file-name "cider-history" temporary-file-directory))
 
 (provide 'setup-clojure)

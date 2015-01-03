@@ -59,10 +59,13 @@
 ;; Install extensions if they're missing
 (defun init--install-packages ()
   (packages-install
-   '(ace-jump-mode
+   '(ac-cider
+     ac-slime
+     ace-jump-mode
      achievements
      angular-snippets
      async
+     auto-complete
      browse-kill-ring
      buffer-move
      buster-snippets
@@ -175,6 +178,7 @@
 (require 'setup-yasnippet)
 (require 'setup-markdown-mode)
 (require 'setup-ace-jump-mode)
+(require 'setup-auto-complete)
 
 ;; Additional package setup
 (require 'achievements)
