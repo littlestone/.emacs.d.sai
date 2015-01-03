@@ -69,6 +69,7 @@
      browse-kill-ring
      buffer-move
      buster-snippets
+     calfw
      change-inner
      cider
      cl-lib-highlight
@@ -167,6 +168,7 @@
 (require 'setup-rgrep)
 (require 'setup-magit)
 (require 'setup-slime)
+(require 'setup-calfw)
 (require 'setup-hippie)
 (require 'setup-skewer)
 (require 'setup-paredit)
