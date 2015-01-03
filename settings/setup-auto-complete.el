@@ -7,7 +7,7 @@
 (ac-config-default)
 (ac-flyspell-workaround)
 (add-to-list 'ac-dictionary-directories temporary-file-directory)
-(setq ac-comphist-file (concat temporary-file-directory "ac-comphist.dat"))
+(setq ac-comphist-file (expand-file-name "ac-comphist.dat" temporary-file-directory))
 
 (global-auto-complete-mode t)
 (setq ac-auto-show-menu t)
