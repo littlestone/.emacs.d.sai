@@ -286,7 +286,7 @@
 (global-set-key (kbd "<C-f10>") 'menu-bar-mode)
 
 ;; Turn on highlight-tail-mode
-(global-set-key (kbd "<f11>") 'highlight-tail-mode)
+(global-set-key (kbd "<C-f11>") 'highlight-tail-mode)
 
 (provide 'key-bindings)
 
