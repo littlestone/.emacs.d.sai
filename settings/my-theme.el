@@ -28,6 +28,10 @@
 (global-whitespace-cleanup-mode)
 
 ;; 中文使用微软雅黑字体
-(set-fontset-font "fontset-default" 'gb18030 '("Microsoft YaHei" . "unicode-bmp")) 
+(set-fontset-font "fontset-default" 'gb18030 '("Microsoft YaHei" . "unicode-bmp"))
+
+;; Fancy mode line
+(require 'powerline)
+(powerline-default-theme)
 
 (provide 'my-theme)
