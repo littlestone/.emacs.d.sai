@@ -104,6 +104,7 @@
      ido-at-point
      ido-ubiquitous
      ido-vertical-mode
+     impatient-mode
      iy-go-to-char
      js2-refactor
      magit
