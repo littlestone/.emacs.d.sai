@@ -2,9 +2,9 @@
 (require 'dired-x)
 (require 'dash)
 
-;; Hiding hidden files by default (toggle the view with C-x M-o)
+;; Toggle hidden files with C-x M-o
 (setq dired-omit-files "^\\...+$")
-(add-hook 'dired-mode-hook (lambda () (dired-omit-mode 1)))
+(add-hook 'dired-mode-hook (lambda () (dired-omit-mode 0)))
 
 ;; Make dired less verbose
 (require 'dired-details)
