@@ -1,5 +1,8 @@
 (require 'flycheck)
 
+;; To permanently enable Flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 (defun magnars/adjust-flycheck-automatic-syntax-eagerness ()
   "Adjust how often we check for errors based on if there are any.
 
