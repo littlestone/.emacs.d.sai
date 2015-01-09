@@ -1,5 +1,5 @@
 (require 'dired)
-(require 'dired-x)
+(require 'dired-x) ; Use the command dired-jump C-x C-j.
 (require 'dash)
 
 ;; Toggle hidden files with C-x M-o
@@ -10,6 +10,10 @@
 (require 'dired-details)
 (setq-default dired-details-hidden-string "--- ")
 (dired-details-install)
+
+;; Allow dired to be able to delete or copy a whole dir.
+(setq dired-recursive-copies (quote always)) ; "always" means no asking
+(setq dired-recursive-deletes (quote top)) ; "top" means ask once
 
 ;; Move files between split panes
 (setq dired-dwim-target t)
