@@ -106,6 +106,7 @@
  "l" 'goto-line-with-feedback
  "m" 'magit-status
  "o" 'other-window
+ "p" 'package-list-packages
  "q" 'read-only-mode
  "r" 'revert-this-buffer
  "t" 'quick-switch-buffer
