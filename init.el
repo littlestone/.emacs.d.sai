@@ -64,6 +64,7 @@
      ace-jump-mode
      achievements
      angular-snippets
+     ascii
      async
      auto-complete
      browse-kill-ring
@@ -83,8 +84,10 @@
      dired-single
      elisp-slime-nav
      evil
+     evil-leader
      evil-matchit
      evil-nerd-commenter
+     evil-numbers
      expand-region
      fill-column-indicator
      flx
@@ -99,6 +102,7 @@
      gitconfig-mode
      gitignore-mode
      groovy-mode
+     helm
      guide-key
      highlight-escape-sequences
      highlight-indentation

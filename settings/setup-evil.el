@@ -3,10 +3,13 @@
 ;;; ====================================
 
 (require 'evil)
+(require 'evil-leader)
 (require 'evil-matchit)
+(require 'evil-numbers)
 (require 'evil-nerd-commenter)
 
 (evil-mode 1)
+(global-evil-leader-mode 1)
 (global-evil-matchit-mode 1)
 (evilnc-default-hotkeys)
 
@@ -80,10 +83,37 @@
   (add-hook 'post-command-hook
             (lambda ()
               (let ((color (cond ((minibufferp) default-color)
-                                 ((evil-insert-state-p) '("gray21" . "orange"))
+                                 ((evil-insert-state-p) '("gray21" . "green"))
                                  ((buffer-modified-p) '("gray21" . "yellow"))
                                  (t default-color))))
                 (set-face-background 'mode-line (car color))
                 (set-face-foreground 'mode-line (cdr color))))))
+
+;; Evil leader key bindings
+(evil-leader/set-leader ",")
+(evil-leader/set-key
+ "+" 'evil-numbers/inc-at-pt
+ "-" 'evil-numbers/dec-at-pt
+ "a" 'ace-jump-mode
+ "b" 'bury-buffer
+ "e" 'ido-find-file
+ "f" 'rgrep
+ "g" 'webjump
+ "h" 'helm-mini
+ "i" 'ibuffer
+ "j" 'dired-jump
+ "k" 'kill-this-buffer
+ "l" 'goto-line-with-feedback
+ "m" 'magit-status
+ "o" 'other-window
+ "q" 'read-only-mode
+ "r" 'revert-this-buffer
+ "t" 'quick-switch-buffer
+ "sf" 'suspend-frame
+ "u" 'undo-tree-visualize
+ "w" 'save-buffer
+ "x" 'ergoemacs-open-in-external-app
+ "z" 'ascii-display
+ "TAB" 'goto-scratch)
 
 (provide 'setup-evil)
