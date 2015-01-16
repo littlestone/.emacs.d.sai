@@ -82,6 +82,9 @@
      dired-details
      dired-single
      elisp-slime-nav
+     evil
+     evil-matchit
+     evil-nerd-commenter
      expand-region
      fill-column-indicator
      flx
@@ -107,6 +110,7 @@
      impatient-mode
      iy-go-to-char
      js2-refactor
+     key-chord
      magit
      markdown-mode
      move-text
@@ -164,6 +168,7 @@
 (require 'setup-os)
 (require 'setup-ido)
 (require 'setup-org)
+(require 'setup-evil)
 (require 'setup-dired)
 (require 'setup-shell)
 (require 'setup-rgrep)
