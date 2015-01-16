@@ -17,7 +17,7 @@
 ;; Expand region (increases selected region by semantic units)
 (global-set-key (kbd "C-'") 'er/expand-region)
 
-;; New rectangle mark mode in Emacs 24.4
+;; New rectangle mark mode in Emacs 24.4 (default keybinding C-x SPC)
 (global-set-key (kbd "C-@") 'rectangle-mark-mode)
 
 ;; Smart M-x
