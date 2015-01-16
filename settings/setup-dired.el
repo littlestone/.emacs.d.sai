@@ -2,14 +2,13 @@
 (require 'dired-x) ; Use the command dired-jump C-x C-j.
 (require 'dash)
 
-;; Toggle hidden files with C-x M-o
-(setq dired-omit-files "^\\...+$")
-(add-hook 'dired-mode-hook (lambda () (dired-omit-mode 0)))
-
 ;; Make dired less verbose
 (require 'dired-details)
 (setq-default dired-details-hidden-string "--- ")
 (dired-details-install)
+
+;; Toggle hidden files with C-x M-o
+(setq dired-omit-files "^\\...+$")
 
 ;; Allow dired to be able to delete or copy a whole dir.
 (setq dired-recursive-copies (quote always)) ; "always" means no asking
