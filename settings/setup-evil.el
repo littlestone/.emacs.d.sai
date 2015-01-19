@@ -110,9 +110,11 @@
  "q" 'read-only-mode
  "r" 'revert-this-buffer
  "t" 'quick-switch-buffer
+ "sa" 'write-file
  "sf" 'suspend-frame
+ "ss" 'save-buffer
  "u" 'undo-tree-visualize
- "w" 'save-buffer
+ "w" 'eww
  "x" 'ergoemacs-open-in-external-app
  "z" 'ascii-display
  "TAB" 'goto-scratch)
