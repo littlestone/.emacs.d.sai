@@ -9,6 +9,7 @@
 (require 'evil-nerd-commenter)
 
 (evil-mode 1)
+(setq evil-leader/in-all-states 1)
 (global-evil-leader-mode 1)
 (global-evil-matchit-mode 1)
 (evilnc-default-hotkeys)
