@@ -93,31 +93,32 @@
 ;; Evil leader key bindings
 (evil-leader/set-leader ",")
 (evil-leader/set-key
- "+" 'evil-numbers/inc-at-pt
- "-" 'evil-numbers/dec-at-pt
- "a" 'ace-jump-mode
- "b" 'bury-buffer
- "e" 'ido-find-file
- "f" 'rgrep
- "g" 'webjump
- "h" 'helm-mini
- "i" 'ibuffer
- "j" 'dired-jump
- "k" 'kill-this-buffer
- "l" 'goto-line-with-feedback
- "m" 'magit-status
- "o" 'other-window
- "p" 'package-list-packages
- "q" 'read-only-mode
- "r" 'revert-this-buffer
- "t" 'quick-switch-buffer
- "sa" 'write-file
- "sf" 'suspend-frame
- "ss" 'save-buffer
- "u" 'undo-tree-visualize
- "w" 'eww
- "x" 'ergoemacs-open-in-external-app
- "z" 'ascii-display
- "TAB" 'goto-scratch)
+  "+" 'evil-numbers/inc-at-pt
+  "-" 'evil-numbers/dec-at-pt
+  "=" 'cleanup-buffer
+  "a" 'ace-jump-mode
+  "b" 'bury-buffer
+  "e" 'ido-find-file
+  "f" 'rgrep
+  "g" 'webjump
+  "h" 'helm-mini
+  "i" 'ibuffer
+  "j" 'dired-jump
+  "k" 'kill-this-buffer
+  "l" 'goto-line-with-feedback
+  "m" 'magit-status
+  "o" 'other-window
+  "p" 'package-list-packages
+  "q" 'read-only-mode
+  "r" 'revert-this-buffer
+  "t" 'quick-switch-buffer
+  "sa" 'write-file
+  "sf" 'suspend-frame
+  "ss" 'save-buffer
+  "u" 'undo-tree-visualize
+  "w" 'eww
+  "x" 'ergoemacs-open-in-external-app
+  "z" 'ascii-display
+  "TAB" 'goto-scratch)
 
 (provide 'setup-evil)
